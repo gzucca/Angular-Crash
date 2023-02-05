@@ -1,0 +1,5 @@
+<!--* Este texto y el color pertenecen al componente "button", pero están siendo definidos por el componente "header". Esta conexión es posible gracias a que tenemos puesto "input" en el "button.component.ts" . Caso contrario podríamos mostrar el valor del componente button, pero sólo definirlo desde el componente en sí (forzandonos a crear muchos componentes) -->
+
+<button [ngStyle]="{'background-color': color}" class="btn" (click)="onClick()">{{textoAmostrar}}</button>
+
+<!--* Para agregar un evento como parámetro, lo tenemos que poner entre () -->
