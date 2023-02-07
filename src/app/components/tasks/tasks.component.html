@@ -1,2 +1,6 @@
 <!--* Acá le estoy pidiendo que loopee por las task del archivo tasks, pero como no quiero definir lo que se renderiza en este componente (contenedor) puedo pasar las "task" como una variable, y elegir cómo quiero renderizarlas desde el componente task-item -->
-<app-task-item *ngFor="let task of tasks" [task]="task" (onDeleteTask)="deleteTask(task)"></app-task-item>
+<app-task-item *ngFor="let task of tasks" 
+[task]="task" 
+(onDeleteTask)="deleteTask(task)"
+(onToggleReminder)="toggleReminder(task)"
+></app-task-item>
