@@ -15,6 +15,8 @@ export class UiService {
     this.subject.next(this.showAddTask);
   }
 
+  //El método "next" es como un "then" en el que espera a la ejecución de la línea anterior para pasar el nuevo valor.
+
   onToggle(): Observable<any> {
   return this.subject.asObservable();
   }

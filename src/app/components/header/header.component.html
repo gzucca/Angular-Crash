@@ -1,7 +1,9 @@
 <header>
-
-    <h1>{{title}}</h1>
-    <!--* Estos parámetros del boton no son palabras reservadas. Las cree como inputs en el componente, y sólo las defino desde acá. -->
-    <app-button color="green" textoAmostrar="Add" (btnClick)="toggleAddTask()"></app-button>
-
+  <h1>{{ title }}</h1>
+  <!--* Estos parámetros del boton no son palabras reservadas. Las cree como inputs en el componente, y sólo las defino desde acá. -->
+  <app-button
+    color="{{showAddTask? 'red' : 'green'}}"
+    textoAmostrar="{{showAddTask? 'Close' : 'Add'}}"
+    (btnClick)="toggleAddTask()"
+  ></app-button>
 </header>
