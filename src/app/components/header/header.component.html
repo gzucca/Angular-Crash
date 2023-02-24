@@ -1,7 +1,7 @@
 <header>
   <h1>{{ title }}</h1>
   <!--* Estos parámetros del boton no son palabras reservadas. Las cree como inputs en el componente, y sólo las defino desde acá. -->
-  <app-button
+  <app-button *ngIf="hasRoute('/')"
     color="{{showAddTask? 'red' : 'green'}}"
     textoAmostrar="{{showAddTask? 'Close' : 'Add'}}"
     (btnClick)="toggleAddTask()"
